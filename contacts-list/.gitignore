@@ -1,6 +1,7 @@
 # Ignorar pasta
 /node_modules
 /bower_components
+/assets/libs
 
 # Ignorar arquivo
 npm-debug.log
