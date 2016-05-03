@@ -14,6 +14,8 @@ angular.module('ctrl.users', ['ui.router'])
 
 .controller('ctrlUsers', ctrlUsers);
 
+ctrlUsers.$inject = ['$scope', 'contactApi'];
+
 function ctrlUsers($scope, contactApi) {
   $scope.name =  'Seu Fulano';
   $scope.contacts = [];
@@ -24,7 +26,7 @@ function ctrlUsers($scope, contactApi) {
         $scope.contacts = data;
       })
       .error(function (data, status) {
-          $scope.message = 'Deu merda: ' + data;
+        $scope.message = data;
       });
   };
 

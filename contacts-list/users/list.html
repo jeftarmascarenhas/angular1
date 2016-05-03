@@ -1,2 +1,28 @@
-<h1>Lista contact</h1>
-<p>{{name}}</p>
+<div class="row">
+
+  <div class="col-xs-12 col-sm-12 col-lg-12">
+    <article class="jumbotron">
+      <h1>List contact</h1>
+    </article>
+  </div>
+<div class="col-xs-12 col-sm-12 col-lg-12">
+  <div class="contact-result" ng-repeat="contact in contacts">
+    <div class="contact-item">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          Avata: <img src="assets/images/{{contact.images}}" alt="Avata" class="img-fluid" />
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-6">
+          Name: {{contact.name}}
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+          Name: {{contact.email}}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</div>

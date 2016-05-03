@@ -1,13 +1,20 @@
 (function functionName() {
 
   angular.module('contactApp')
-    .factory(['contactApi', contactApi]);
+    .factory('contactApi', contactApi);
 
   function contactApi($http, config) {
-    var _getContacts = $http.get(config.baseUrl + '/contacts');
+    var _getContacts = function () {
+      return $http.get(config.baseUrl + '/contacts');
+    };
+
+    var _postContacts = function (contato) {
+      return $http.get(config.baseUrl + '/contacts');
+    };
 
     return {
-      getContacts: _getContacts
+      getContacts: _getContacts,
+      postContacts: _postContacts
     };
 
   }
