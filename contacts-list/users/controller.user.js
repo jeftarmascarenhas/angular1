@@ -9,6 +9,11 @@ angular.module('ctrl.users', ['ui.router'])
       url: '/users',
       templateUrl: 'users/list.html',
       controller: 'ctrlUsers'
+    })
+    .state('registre', {
+      url:'/registre',
+      templateUrl: 'users/registre.html',
+      controller: 'ctrlUsers'
     });
 }])
 
@@ -30,7 +35,20 @@ function ctrlUsers($scope, contactApi) {
       });
   };
 
-  loadContacts();
+  $scope.addRegistre = function (registre) {
+    registre.data = new Date();
+    contactApi.postContacts(registre)
+      .success(function (data) {
+        console.log(data);
+        delete $scope.registre;
+        loadContacts();
+      })
+      .error(function (data, status) {
+        $scope.message = 'Erro ao registrar: ' + data;
+      });
+  };
+
+loadContacts();
 
 }
 

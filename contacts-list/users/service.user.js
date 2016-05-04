@@ -8,8 +8,8 @@
       return $http.get(config.baseUrl + '/contacts');
     };
 
-    var _postContacts = function (contato) {
-      return $http.get(config.baseUrl + '/contacts');
+    var _postContacts = function (registre) {
+      return $http.post(config.baseUrl + '/contacts');
     };
 
     return {

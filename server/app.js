@@ -4,9 +4,9 @@ var http = require('http').Server(app);
 var port = process.env.PORT || 3412;
 
 var contatos = [
-                {name:'Jeftar Mascarenhas', email: 'jeftarmascarenhas@hotmail.com', password:'121#@', images: '1.png' },
-                {name:'Filipe Sales', email: 'filipe@hotmail.com', password:'131#@', images: '2.png'},
-                {name:'Kevin caravalho', email: 'kevin@hotmail.com', password:'1221#@', images: '3.png'}
+                {name:'Jeftar Mascarenhas', email: 'jeftarmascarenhas@hotmail.com', images: '1.png', password:'121#@' },
+                {name:'Filipe Sales', email: 'filipe@hotmail.com', images: '2.png', password:'131#@'},
+                {name:'Kevin caravalho', email: 'kevin@hotmail.com', images: '3.png', password:'1221#@'}
               ];
 
 
