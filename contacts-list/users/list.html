@@ -1,22 +1,26 @@
 <div class="row">
-
   <div class="col-xs-12 col-sm-12 col-lg-12">
     <article class="jumbotron">
       <h1>List contact</h1>
     </article>
   </div>
 <div class="col-xs-12 col-sm-12 col-lg-12">
-  <div class="contact-result" ng-repeat="contact in contacts">
+  <div class="form-control">
+    <input type="search" ng-model="searchUser">
+  </div>
+</div>
+<div class="col-xs-12 col-sm-12 col-lg-12">
+  <div class="contact-result" ng-repeat="contact in contacts | orderBy:name | filter:searchUser">
     <div class="contact-item">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-          Avata: <img src="assets/images/{{contact.images}}" alt="Avata" class="img-fluid" />
+          Avata: {{contact.images}}
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-6">
           Name: {{contact.name}}
         </div>
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-          Name: {{contact.email}}
+          E-makil: {{contact.email}}
         </div>
       </div>
     </div>
