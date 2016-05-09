@@ -1,0 +1,34 @@
+<section class="forms">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h3>Lista de usuários</h3>
+      <a ui-sref="register.users" ng-click="data = !data">Lista</a>
+      <article ui-view="users" ng-show="data"></article>
+    </div>
+  </div>
+</section>
+<div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12">
+    <div class="box">
+      <form id="form-register" method="post">
+        <!-- <fieldset class="form-group">
+        <label for="image">Avatar: </label>
+        <input type="file" name="image" id="image" class="form-control" ng-model="registre.image"/>
+      </fieldset> -->
+      <fieldset class="form-group">
+        <label for="fullname">Name: </label>
+        <input type="text" name="name" id="fullname" placeholder="Seu nome" class="form-control" ng-model="registre.name"/>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="">E-mail</label>
+        <input type="email" name="name" placeholder="exemple@provedor.com" class="form-control" ng-model="registre.email"/>
+      </fieldset>
+      <fieldset class="form-group">
+        <label for="">Senha</label>
+        <input type="password" name="senha" placeholder="pass" class="form-control" ng-model="password.email"/>
+      </fieldset>
+      <button type="submite" class="btn btn-primary" ng-click="addRegistre(registre)">Cadastrar</button>
+    </form>
+    </div>
+</div>
+</div>

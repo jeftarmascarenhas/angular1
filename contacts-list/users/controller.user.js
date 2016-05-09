@@ -10,10 +10,17 @@ angular.module('ctrl.users', ['ui.router'])
       templateUrl: 'users/list.html',
       controller: 'ctrlUsers'
     })
-    .state('registre', {
-      url:'/registre',
-      templateUrl: 'users/registre.html',
+    .state('register', {
+      url:'/register',
+      templateUrl: 'users/register.html',
       controller: 'ctrlUsers'
+    })
+    .state('register.users',{
+      views:{
+        "users":{
+            templateUrl: 'users/list.html',
+        }
+      }
     });
 }])
 
